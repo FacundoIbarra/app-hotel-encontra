@@ -1,35 +1,25 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
+<!---este div contiene todos los elementos-->
 <div class="contenedorGral">
-  <!---este div contiene todos los elementos-->
 
+  <!--este div contiene formulario y contenedor nube-sol-->
   <div class="container grid">
-    <!--este div contiene formulario y contenedor nube-sol-->
 
-    <div class="card card-body mr-4">
-      <form (submit)="submitCiudad(nombreCiudad)">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Ingresa el nombre de la ciudad" #nombreCiudad>
+    <div class="cardFormulario">
+      <img src="../../assets/img/imagenClima.JPG" alt="">
+
+      <form class="formCiudad" (submit)="submitCiudad(nombreCiudad)">
+        <div class="">
+          <input type="text" class="inputCiudad" placeholder="Ingresa tu ciudad!" #nombreCiudad>
           <!-- nombre ciudad es var donde se guarda dato del input-->
         </div>
-        <button class="btn btn-primary mt-2 btn-block">Obtener clima</button>
+
+        <button class="buttonCiudad">Buscar</button>
       </form>
 
-      <div class="col-md-8">
-        <!--Aca mostramos los datos -->
-        <div *ngIf="clima" class="card mt-5 p-2">
-          <!-- si clima existe entonces muestra, sino no -->
-          <p>Temperatura: {{clima.main.temp}}°C</p>
-          <!--acceso a datos del array de api -->
-          <p>Máxima: {{clima.main.temp_max}}°C</p>
-          <p>Mínima: {{clima.main.temp_min}}°C</p>
-          <p>Humedad: {{clima.main.humidity}}%</p>
-        </div>
-      </div>
-
     </div>
-
 
     <!-- aca comienza estilos con la nube y sol -->
 
@@ -54,14 +44,18 @@
       <div class="weatherWidgetRow" style="font-size: 12px;margin-top: 5px;">Humedad: {{clima.main.humidity}} %</div>
       <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{clima.name}}</div>
 
-
-
     </div>
 
   </div>
   <!--este div contiene formulario y contenedor nube-sol-->
 
-
-
 </div>
 <!--este div contiene todos los elementos-->
+      
+
+
+
+
+
+
+

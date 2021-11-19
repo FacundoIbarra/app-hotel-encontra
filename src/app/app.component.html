@@ -1,18 +1,30 @@
-<!-- Toolbar -->
+<!-- Navegación Principal -->
 
-<div class="toolbar" role="banner">
-  <i class="fas fa-2x fa-h-square icono"></i>
-  <span>EncontraHotel</span>
-  
-  <div class="spacer">  </div>
+<div class="nav-bg">
+  <nav class="navegacion-principal contenedor">
 
-  <div class="dropClienteNav">
-    <i class="fas fa-2x fa-caret-square-down"></i>
-  </div>
+    <a href="#"><i class="fas fa-2x fa-h-square icono espacioIcono"></i>EncontraHotel</a>
+    <a href="#"><i class="fas fa-2x fa-caret-square-down"></i></a>
 
+  </nav>
 </div>
-  
+
 <!-- Main -->
 
-  <app-api-clima></app-api-clima>
+<!-- Muestra componente segun ruta especificada -->
+<router-outlet></router-outlet> 
 
+<!-- <app-api-clima></app-api-clima>
+<app-listado-hoteles></app-listado-hoteles> -->
+
+<footer class="footer">
+
+  <div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+
+      <a href="#"><i class="fas fa-2x fa-h-square icono espacioIcono"></i>EncontraHotel</a>
+
+    </nav>
+  </div>
+
+</footer>

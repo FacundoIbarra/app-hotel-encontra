@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { climaService } from './Services/clima.service';
+import { climaService } from './clima.service';
 
 @Component({
   selector: 'app-api-clima',
   templateUrl: './api-clima.component.html',
-  styleUrls: ['./api-clima.component.css']
+  styleUrls: ['./api-clima.component.css'],
+  providers: [climaService]
 })
 export class apiClimaComponent implements OnInit {
 

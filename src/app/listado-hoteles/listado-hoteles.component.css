@@ -1,0 +1,110 @@
+/* Estilos mobile first */
+
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  /* 1rem = 10px */
+  font-weight: bold;
+  color: var(--primario);
+
+}
+
+.contenedorSection {
+  margin-top: 44rem;
+}
+
+.listadoHoteles {
+
+  margin: 2rem 2rem 2rem 2rem;
+  height: 40rem;
+  width: 30rem ;
+  background: var(--blanco);
+  padding: 2rem 0 2rem 0rem;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3)
+}
+
+@media (min-width: 768px) {
+  /* A partir de 768px divide en 3 columnas */
+
+  .contenedorSection {
+    margin-top: 25rem;
+  }
+
+  .contenedor-listado {
+    /* display: flex; para que se alineen uno al lado del otro */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    margin-left: 2rem;
+    /* justify-content: space-evenly; Reemplace por flex por grid */
+  }
+
+  .listadoHoteles {
+
+    margin: 2rem 2rem 2rem 10rem;
+    height: 19rem;
+    width: 100rem ;
+    background: var(--blanco);
+    padding: 2rem 0 5rem 0rem;
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3)
+  }
+}
+
+.img {
+  margin-right: 0;
+}
+
+.contenedor-listado .img img {
+  height: 15rem;
+  border-radius: 0.7rem;
+}
+
+.contenedor-listado .datosHotel p {
+  justify-content: center;
+}
+
+.contenedor-listado .datosHotel h3 {
+  text-align: start;
+}
+
+.contenedor-listado .precioBajo h3 {
+  text-align: start;
+  margin-left: 2rem;
+}
+
+.espacioIcono {
+  margin-right: 1rem;
+}
+
+
+.datosHotel {
+  background-color: var(--crema);
+  padding-left: 1rem;
+  border-radius: 2rem;
+
+}
+
+.precioBajo {
+  background-color: var(--crema);
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+/* Estrellas */
+
+ngb-rating {
+  color: #FFC107;
+  font-size: 2rem;
+}
+
+
+/* Fin Estrellas */
+
+
+
+
+
+
+

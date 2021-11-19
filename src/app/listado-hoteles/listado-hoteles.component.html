@@ -1,1 +1,44 @@
-<p>listado-hoteles works!</p>
+<!-- llamado a componente api clima -->
+<app-api-clima></app-api-clima>
+
+
+<!-- Comienza codigo listado hoteles -->
+
+<div class="contenedorSection">
+
+
+  <h1 class="titulo">Nuestros Hoteles</h1>
+
+
+
+  <section *ngFor="let hotel of hoteles" class="listadoHoteles" (click)="detalleHotel()">
+
+
+    <div class="contenedor-listado">
+
+      <div class="img">
+        <img src="{{hotel.imagen}}" alt="">
+      </div>
+
+      <div class="datosHotel">
+        <h3>{{hotel.nombre}}</h3>
+
+        <ngb-rating [max]="5" [(rate)]="hotel.estrellas" [readonly]="true"></ngb-rating>
+        <p></p>
+
+        <p><i class="fas fa-map-marker-alt espacioIcono"></i>{{hotel.ubicacion}}</p>
+      </div>
+
+
+
+
+
+      <div class="precioBajo">
+        <h3>$ {{hotel.precio}} </h3>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

@@ -1,0 +1,175 @@
+/* estilos mobile first */
+
+.divWeatherMain {
+    display: block;
+    border-radius: 10px;
+    width: 200px;
+    height: 235px;
+    margin-left: 10px;
+    background: #1f2327;
+    background: linear-gradient(180deg, #1976d2 0%, rgba(8,7,42,1));
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    position: absolute;
+    top: 66%;
+    left: 30%;
+    transform: translate(-20%, -20%);
+
+}
+
+/* estilos para notebook */
+@media (min-width: 768px) {
+    .divWeatherMain {
+        display: block;
+        border-radius: 10px;
+        width: 200px;
+        height: 280px;
+        margin-left: 10px;
+        background: #1f2327;
+        background: linear-gradient(180deg, #1976d2 0%, rgba(8,7,42,1));
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+        position: absolute;
+        top: 22%;
+        left: 31%;
+        transform: translate(-20%, -20%);
+    
+    }
+}
+
+.weatherWidgetRow {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+
+}
+
+.sun {
+    margin-top: 10px;
+    color: yellow;
+    filter: drop-shadow(1px 1px 10px yellow);
+}
+
+.moon {
+    margin-top: 10px;
+    color: white;
+    filter: drop-shadow(1px 1px 10px white);
+}
+
+.cloudDiv {
+    margin-top: -40px;
+}
+
+.cloud {
+    color: rgb(104, 175, 197);
+    filter: drop-shadow(1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes cloudMovement {
+    from{margin-left: -55px;}
+    to{margin-left: 65px;}
+}
+
+/* .grid {
+    display: grid;
+    grid-template-columns: 550px 200px;
+    grid-template-rows: 150px ;
+} */
+
+.contenedorGral{
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 40px;
+}
+
+.cardFormulario {
+    background: var(--blanco);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 29%;
+    left: 33%;
+    transform: translate(-20%, -20%);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(0,0,0, .3)
+}
+
+@media (min-width: 768px) {
+    .cardFormulario {
+        background: var(--blanco);
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 22%;
+        left: 49%;
+        transform: translate(-20%, -20%);
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 7px 13px 37px rgba(0,0,0, .3)
+    }
+}
+
+    
+
+.cardFormulario img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+
+.formCiudad {
+    padding: 1rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.inputCiudad {
+    margin: 0 1rem 0 1rem;
+    width: 16rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--crema);
+}
+
+.buttonCiudad {
+    margin: 1rem;
+    color: var(--blanco);
+    background: var(--verde);
+    border-style: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all .4s ease-in-out;
+}
+
+.buttonCiudad:hover {
+    transform: scale(1.2);
+
+}
+
+
+
+
+
+.botonInput {
+    border-radius: 10px;
+}
+.inputBoton {
+    border-radius: 10px;
+}
+
+
+
+
+
+
