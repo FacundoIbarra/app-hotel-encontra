@@ -1,0 +1,237 @@
+.contenedorSection {
+  margin: 0 auto;
+  max-width: 84rem;
+
+}
+
+/* Estilos mobile first */
+
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  /* 1rem = 10px */
+  font-weight: bold;
+  color: var(--primario);
+
+}
+
+
+.listadoHoteles {
+
+  margin: 2rem 2rem 2rem 2rem;
+  height: 40rem;
+  width: 30rem;
+  background: var(--blanco);
+  padding: 2rem 0 2rem 0rem;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3)
+}
+
+@media (min-width: 768px) {
+  /* A partir de 768px divide en 3 columnas */
+
+  .contenedorSection {
+    margin-top: 5rem;
+  }
+
+  .contenedor-listado {
+    /* display: flex; para que se alineen uno al lado del otro */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    margin-left: 2rem;
+    /* justify-content: space-evenly; Reemplace por flex por grid */
+  }
+
+  .listadoHoteles {
+
+    margin: 2rem 2rem 6rem 2rem;
+    height: 19rem;
+    width: 80rem;
+    background: var(--blanco);
+    padding: 2rem 0 5rem 0rem;
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3)
+  }
+}
+
+.img {
+  margin-right: 0;
+}
+
+.contenedor-listado .img img {
+  height: 15rem;
+  border-radius: 0.7rem;
+}
+
+.contenedor-listado .datosHotel p {
+  justify-content: center;
+}
+
+.contenedor-listado .datosHotel h3 {
+  text-align: start;
+}
+
+.contenedor-listado .precioBajo h3 {
+  text-align: start;
+  margin-left: 2rem;
+}
+
+.espacioIcono {
+  margin-right: 1rem;
+}
+
+
+.datosHotel {
+  background-color: var(--crema);
+  padding-left: 1rem;
+  border-radius: 2rem;
+
+}
+
+.precioBajo {
+  background-color: var(--crema);
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+/* Estrellas */
+
+ngb-rating {
+  color: #FFC107;
+  font-size: 2rem;
+}
+
+/* Fin Estrellas */
+
+
+/* Estilos para Habitaciones y Servicios */
+
+
+.habitacionYservicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.habContenedor {
+  margin: 0 auto;
+  height: 40rem;
+  width: 40rem;
+  background: var(--blanco);
+  padding: 2rem 0 2rem 0rem;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
+}
+
+.habitaciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.tipoHab {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  line-height: 8rem;
+  margin-left: 2rem;
+}
+
+.tipoHab label {
+  margin-left: 2rem;
+}
+
+.precioHab {
+  text-align: end;
+  line-height: 7.7rem;
+  margin-right: 3rem;
+}
+
+
+
+
+/* Estilos servicios adicionales */
+
+.servContenedor {
+  margin: 0 auto;
+  height: 40rem;
+  width: 40rem;
+  background: var(--blanco);
+  padding: 2rem 0 2rem 0rem;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
+}
+
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.tipoServ {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  line-height: 8rem;
+  margin-left: 2rem;
+
+}
+
+.tipoServ label {
+  margin-left: 1rem;
+}
+
+.precioServ {
+  text-align: end;
+  line-height: 7.7rem;
+  margin-right: 3rem;
+}
+
+
+/* Fin Estilos para Habitaciones y Servicios */
+
+
+/* Estilos Sección Reservas */
+
+.contenedorReservas {
+
+  margin: 0 auto;
+  margin-top: 6rem;
+  height: 20rem;
+  width: 78rem;
+  background: var(--blanco);
+  padding: 2rem 0 2rem 0rem;
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
+
+}
+
+.reservas {
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.rangoFechas p {
+  text-align: left;
+}
+
+.precioTotal {
+  text-align: center;
+}
+
+
+button {
+  margin: 1rem;
+  color: var(--blanco);
+  background: var(--verde);
+  border-style: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all .4s ease-in-out;
+}
+
+/* FIN -- Estilos Sección Reservas */
+

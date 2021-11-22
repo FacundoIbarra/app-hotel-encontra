@@ -42,13 +42,14 @@
 
   .listadoHoteles {
 
-    margin: 2rem 2rem 2rem 10rem;
+    margin: 2rem 2rem 2rem 26rem;
     height: 19rem;
     width: 100rem ;
     background: var(--blanco);
     padding: 2rem 0 5rem 0rem;
     border-radius: 15px;
     box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3)
+    
   }
 }
 

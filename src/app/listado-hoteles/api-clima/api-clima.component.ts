@@ -10,7 +10,7 @@ import { climaService } from './clima.service';
 export class apiClimaComponent implements OnInit {
 
   title = 'Weather App';
-  clima: any; //almacena temproalmente datos del clima, es la var q vamos a mostrar
+  clima: any; //almacena temporalmente datos del clima, es la var q vamos a mostrar
 
   constructor(private climaService: climaService) {}
 

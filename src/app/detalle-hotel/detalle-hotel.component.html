@@ -1,1 +1,140 @@
-<p>detalle-hotel works!</p>
+<div  class="contenedorSection">
+  <h1 class="titulo">Tu Hotel Seleccionado</h1>
+
+
+  <section  class="listadoHoteles">
+    <div *ngFor="let hotel of hoteles; let i = index" class="contenedor-listado">
+
+      <div class="img">
+        <img src={{hotel.imagen}} alt="">
+      </div>
+
+      <div class="datosHotel">
+        <h3>{{i}} {{hotel.nombre}}</h3>
+
+        <ngb-rating [max]="5" [(rate)]="hotel.estrellas" [readonly]="true"></ngb-rating>
+        <p></p>
+
+        <p><i class="fas fa-map-marker-alt espacioIcono"></i>{{hotel.ubicacion}}</p>
+      </div>
+
+      <div class="precioBajo">
+        <h3>$ {{hotel.precio}}</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Sección habitaciones y servicios -->
+
+  <section class="habitacionYservicios">
+
+    <!-- Habitaciones -->
+
+
+    <div class="habContenedor">
+      <h3>Habitaciones</h3>
+
+      <div *ngFor="let hotel of hoteles" class="habitaciones">
+
+        <div class="tipoHab">
+          <input type="radio" name="hab" id="dobleEco">
+          <label for="dobleEco">{{hotel.variantes[0].nombre}}</label><br>
+
+          <input type="radio" name="hab" id="dobleEco">
+          <label for="dobleEco">{{hotel.variantes[1].nombre}}</label><br>
+
+          <input type="radio" name="hab" id="dobleEco">
+          <label for="dobleEco">{{hotel.variantes[2].nombre}}</label><br>
+
+          <!-- <input type="radio" name="hab" id="dobleEst">
+          <label for="dobleEst">{{hotel.variantes[0].nombre}}</label><br>
+
+          <input type="radio" name="hab" id="tripleEco">
+          <label for="tripleEco"{{hotel.variantes[0].nombre}}></label><br> -->
+        </div>
+
+
+        <div class="precioHab">
+          <p>$ {{hotel.variantes[0].precio}}</p>
+          <p>$ {{hotel.variantes[1].precio}}</p>
+          <p>$ {{hotel.variantes[2].precio}}</p>
+          <!-- <p>$ 5000</p>
+          <p>$ 6000</p> -->
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Servicios Adicionales -->
+
+
+    <div class="servContenedor">
+      <h3>Servicios Adicionales</h3>
+
+
+      <div class="servicios">
+
+        <div class="tipoServ">
+          <input type="checkbox">
+          <label for="dobleEco">Almuerzo</label><br>
+
+          <input type="checkbox">
+          <label for="dobleEco">Cena</label><br>
+
+          <input type="checkbox">
+          <label for="dobleEco">Cochera</label><br>
+
+          <input type="checkbox">
+          <label for="dobleEco">Lavanderia</label><br>
+
+
+        </div>
+
+        <div class="precioServ">
+          <p>$ 400</p>
+          <p>$ 500</p>
+          <p>$ 700</p>
+          <p>$ 300</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FIN -- Sección habitaciones y servicios -->
+
+  <!-- Sección Reservas -->
+
+  <div class="contenedorReservas">
+    <h1 class="titulo">Reservas</h1>
+
+    <section class="reservas">
+
+      <div class="RangoFechas">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Selecciona un rango de fechas:</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date">
+            <input matEndDate placeholder="End date">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+      </div>
+
+      <div class="precioTotal">
+        <p>$ Precio Total</p>
+      </div>
+
+      <button>Reservar</button>
+
+    </section>
+  </div>
+  <!-- FIN -- Sección Reservas -->
+</div>
