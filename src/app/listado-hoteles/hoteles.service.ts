@@ -19,8 +19,10 @@ export class HotelesServices {
             { nombre: 'Triple estandar', precio: 4000 },
           ],
           [ //Array de servicios
-            { descripcion: 'Almuerzo', precio: 330 },
-            { descripcion: 'Cena', precio: 200 },
+            { descripcion: 'Almuerzo', precio: 400 },
+            { descripcion: 'Cena', precio: 500 },
+            { descripcion: 'Cochera', precio: 700 },
+            { descripcion: 'Lavanderia', precio: 300 },
           ], //Imagen
           'https://cdn.mexicodestinos.com/hoteles/hotel-krystal-beach-acapulco-fachada-princ-min.jpg'
           ),

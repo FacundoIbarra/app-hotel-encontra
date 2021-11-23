@@ -23,6 +23,7 @@ export class DetalleHotelComponent implements OnInit {
     this.hoteles = this.hotelesServices.hoteles;
   }
 
+
 }
 
 

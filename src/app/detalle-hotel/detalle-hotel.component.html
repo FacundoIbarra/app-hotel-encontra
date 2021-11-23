@@ -2,20 +2,20 @@
   <h1 class="titulo">Tu Hotel Seleccionado</h1>
 
 
-  <section  class="listadoHoteles">
-    <div *ngFor="let hotel of hoteles; let i = index" class="contenedor-listado">
+  <section class="listadoHoteles">
+    <div *ngFor="let hotel of hoteles" class="contenedor-listado">
 
       <div class="img">
         <img src={{hotel.imagen}} alt="">
       </div>
 
       <div class="datosHotel">
-        <h3>{{hotel.nombre}}</h3>
+        <h3> {{hotel.nombre}} </h3>
 
         <ngb-rating [max]="5" [(rate)]="hotel.estrellas" [readonly]="true"></ngb-rating>
         <p></p>
 
-        <p><i class="fas fa-map-marker-alt espacioIcono"></i>{{hotel.ubicacion}}</p>
+        <p><i class="fas fa-map-marker-alt espacioIcono">{{hotel.ubicacion}}</i></p>
       </div>
 
       <div class="precioBajo">
@@ -36,7 +36,7 @@
     <div class="habContenedor">
       <h3>Habitaciones</h3>
 
-      <div *ngFor="let hotel of hoteles" class="habitaciones">
+      <div *ngFor="let  hotel of hoteles" class="habitaciones">
 
         <div class="tipoHab">
           <input type="radio" name="hab" id="dobleEco">
@@ -75,29 +75,29 @@
       <h3>Servicios Adicionales</h3>
 
 
-      <div class="servicios">
+      <div *ngFor="let hotel of hoteles"class="servicios">
 
         <div class="tipoServ">
           <input type="checkbox">
-          <label for="dobleEco">Almuerzo</label><br>
+          <label for="dobleEco">{{hotel.servicios[0].descripcion}}</label><br>
 
           <input type="checkbox">
-          <label for="dobleEco">Cena</label><br>
+          <label for="dobleEco">{{hotel.servicios[1].descripcion}}</label><br>
 
           <input type="checkbox">
-          <label for="dobleEco">Cochera</label><br>
+          <label for="dobleEco">{{hotel.servicios[2].descripcion}}</label><br>
 
           <input type="checkbox">
-          <label for="dobleEco">Lavanderia</label><br>
+          <label for="dobleEco">{{hotel.servicios[3].descripcion}}</label><br>
 
 
         </div>
 
         <div class="precioServ">
-          <p>$ 400</p>
-          <p>$ 500</p>
-          <p>$ 700</p>
-          <p>$ 300</p>
+          <p>$ {{hotel.servicios[0].precio}}</p>
+          <p>$ {{hotel.servicios[1].precio}}</p>
+          <p>$ {{hotel.servicios[2].precio}}</p>
+          <p>$ {{hotel.servicios[3].precio}}</p>
         </div>
 
       </div>
@@ -109,10 +109,10 @@
 
   <!-- Sección Reservas -->
 
-  <div class="contenedorReservas">
+  <div class="contenedorReservas contenedorReservasMedia">
     <h1 class="titulo">Reservas</h1>
 
-    <section class="reservas">
+    <section class="reservas reservasMedia">
 
       <div class="RangoFechas">
 

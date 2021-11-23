@@ -52,11 +52,17 @@
     padding: 2rem 0 5rem 0rem;
     border-radius: 15px;
     box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3)
+
+    
+  }
+
+  .img {
+    margin-right: 0;
   }
 }
 
 .img {
-  margin-right: 0;
+  margin-left: 3rem;
 }
 
 .contenedor-listado .img img {
@@ -66,6 +72,7 @@
 
 .contenedor-listado .datosHotel p {
   justify-content: center;
+  
 }
 
 .contenedor-listado .datosHotel h3 {
@@ -83,6 +90,7 @@
 
 
 .datosHotel {
+  
   background-color: var(--crema);
   padding-left: 1rem;
   border-radius: 2rem;
@@ -107,26 +115,49 @@ ngb-rating {
 
 /* Estilos para Habitaciones y Servicios */
 
-
 .habitacionYservicios {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .habContenedor {
   margin: 0 auto;
   height: 40rem;
-  width: 40rem;
+  width: 30rem;
   background: var(--blanco);
   padding: 2rem 0 2rem 0rem;
   border-radius: 15px;
   box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
 }
 
+@media (min-width: 768px) {
+
+  .habitacionYservicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .habContenedor {
+    margin: 0 auto;
+    height: 40rem;
+    width: 40rem;
+    background: var(--blanco);
+    padding: 2rem 0 2rem 0rem;
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
+  }
+
+  .tipoHab label {
+    margin-left: 2rem;
+  }
+
+}
+
+
 .habitaciones {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
+
 }
 
 .tipoHab {
@@ -138,7 +169,7 @@ ngb-rating {
 }
 
 .tipoHab label {
-  margin-left: 2rem;
+  margin-left: 0.5rem;
 }
 
 .precioHab {
@@ -153,19 +184,35 @@ ngb-rating {
 /* Estilos servicios adicionales */
 
 .servContenedor {
-  margin: 0 auto;
+  margin: 20px auto;
   height: 40rem;
-  width: 40rem;
+  width: 30rem;
   background: var(--blanco);
   padding: 2rem 0 2rem 0rem;
   border-radius: 15px;
   box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
 }
 
+@media (min-width: 768px) {
+
+  .servContenedor {
+    margin: 0 auto;
+    height: 40rem;
+    width: 40rem;
+    background: var(--blanco);
+    padding: 2rem 0 2rem 0rem;
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
+  }
+
+}
+
+
+
 .servicios {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
+
 }
 
 .tipoServ {
@@ -193,12 +240,16 @@ ngb-rating {
 
 /* Estilos Sección Reservas */
 
+/* MobileFirst */
+
+
+
 .contenedorReservas {
 
   margin: 0 auto;
   margin-top: 6rem;
-  height: 20rem;
-  width: 78rem;
+  height: 28rem;
+  width: 36rem;
   background: var(--blanco);
   padding: 2rem 0 2rem 0rem;
   border-radius: 15px;
@@ -210,7 +261,8 @@ ngb-rating {
   margin: 0 auto;
   margin-top: 3rem;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -233,5 +285,30 @@ button {
   transition: all .4s ease-in-out;
 }
 
-/* FIN -- Estilos Sección Reservas */
+  
+@media (min-width: 768px) {
 
+  .contenedorReservas {
+
+    margin: 0 auto;
+    margin-top: 6rem;
+    height: 20rem;
+    width: 78rem;
+    background: var(--blanco);
+    padding: 2rem 0 2rem 0rem;
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(59, 44, 44, 0.3);
+  }
+
+  .reservas {
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+}
+
+/* FIN -- Estilos Sección Reservas */
